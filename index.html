@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family: 'Cormorant Garamond', serif; background-color: #FAFAFA;">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 p-2 mb-1 jumbotron jumbotron-fluid" style="background-color: #2A3F57; color: #fafafa">
+        <h3>Belly Button Biodiversity Dashboard</h3>
+        <p class="m-0" style="font-family: 'Roboto'">Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+    <div class="row mt-3 align-items-center justify-content-center">
+      <div class="col-md-2 my-1" style="vertical-align: middle;">
+        <div class="card mb-3" style="background-color: #2A3F57; color: #fafafa">
+          <div class="card-body align-items-center justify-content-center p-1">
+            <h5 class="card-title">Test Subject ID No.:</h5>
+            <select id="selDataset" style="background-color: rgba(246, 62, 2, 1.0);color: #fafafa; font-family: 'Roboto'">
+              </select>
+          </div>
+        </div>
+        <div class="card" style="background-color: #2A3F57; color: #fafafa">
+          <div class="card-header p-1">
+            <h5 class = "m-0">Test Subject Info</h5>
+          </div>
+          <div class="card-body px-2" style="background-color: white; color: #2A3F57; font-size: medium; font-family: 'Roboto'">
+            <div id="sample-metadata" class="panel-body">
+              <!-- This is where the demographic info goes  -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 my-1 align-middle">
+        <div class="card" style="height: 300; background-color: #2A3F57; color: #fafafa">
+          <div class="card-header p-1">
+            <h5 class = "m-0">Top Operational Taxonomic Units (OTUs) by ID</h5>
+            <h6 class="card-subtitle mt-1" style="font-style: italic;">(operational taxonomic units are used to identify different microbial species)</hg>
+          </div>
+          <div class="card-body p-0" style="background-color: #fafafa;"">
+        <div id="bar"></div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 my-1 align-top"">
+    <div class="card" style="background-color: #2A3F57; color: #fafafa">
+      <div class="card-header p-1">
+        <h5 class = "m-0">Belly Button Washing Frequency</h5>
+      </div>
+      <div class="card-body p-0" style="background-color: #fafafa;">
+        <div id="gauge"></div>
+      </div>
+    </div>
+  </div>
+      </div>
+    <div class="row justify-content-center mt-3">
+      <div class="col-md-10">
+        <div class="card" style="background-color: #2A3F57; color: #fafafa">
+          <div class="card-header p-1">
+            <h5 class = "m-0">OTU Sample Occurence Distribution</h5>
+          </div>
+        <div class="card-body p-0" style="background-color: #fafafa;">
+          <div id="bubble"></div>
+        </div>
+      </div>
+      <a href="http://robdunnlab.com/projects/belly-button-biodiversity/results-and-data/" class="ml-3 mt-1" style="color: rgba(246, 62, 2, 1.0)"><b>Data Source:</b> The Public Science Lab | Department of Applied Ecology | North Carolina State University</a>
+    </div>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+
+</body>
+
+</html>
