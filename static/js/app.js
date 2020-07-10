@@ -80,6 +80,7 @@ function init(){
             marker: {
               size: defArray.map(d=>d.sample_value),
               color: defArray.map(d=>d.otu_id),
+              colorscale: "Portland",
               sizeref: 2.0 * Math.max(...defArray.map(d=>d.sample_value)) / (desired_maximum_marker_size**2),
               sizemode: 'area'
             }
